@@ -1,4 +1,3 @@
-
 # a) Función recursiva obtiene el maximo valor de una lista de naturales.
 
 def Maximo(list,index):
@@ -19,10 +18,10 @@ def Maximo(list,index):
 # b) Función recursiva que recibe como parámetro una lista de naturales 
 # y muestra todos los números de dicha lista desde el último al primero.
 
-def inve(L,j):
-    if len(L)-j>=0:
-        print(L[len(L)-j])
-        inve(L,j+1)
+def invierteLista(lista,indice):
+    if len(lista)-indice>=0:
+        print(lista[len(lista)-indice])
+        invierteLista(lista,indice+1)
     else: 
         print('fin')
 
@@ -32,36 +31,36 @@ def inve(L,j):
 # Función recursiva que evalúe un polinomio usando la regla de Honer:
 # p(x)= ((..((a_n * x )  +  a_{n-1} )x + ... + a_1)x + a_0 )
 
-def pol(x,L,n,j):
+def polinomioHoner(x,L,n,j):
     if n>j:
-        return ((pol(x,L,n,j+1))*x + L[n-j])
+        return ((polinomioHoner(x,L,n,j+1))*x + L[n-j])
     else:
         return L[0]
 
 ##########################################################################################################
 
-######################################### RELLENAR UNA LISTA L #############################################
-n=int(input("Ingresa la longitud de la lista:"))
-L=[]
+######################################### RELLENAR UNA LISTA #############################################
+longitudLista   = int(input("Ingresa la longitud de la lista:"))
+Lista=[]
 print("Ingrese los valores de la lista L:")                         
-for i in range(0,n):                                                
-    L.append(int(input()))                                          
-print("Según los números ingresados, la lista L es:", L) 
+for i in range(0,longitudLista):                                                
+    Lista.append(int(input()))                                          
+print("Según los números ingresados, la lista L es:", Lista) 
 #############################################################################################################
 
 ######################################## Prueba del inciso a) ############################################
 print("El valor maximo de la lista L es:")      ##########################################################
-Maximo(L,1)                                     ################# Llamar a la función max ################
+Maximo(Lista,1)                                     ################# Llamar a la función max ################
 ##########################################################################################################
 
 ######################################## Prueba del inciso b) ##############################################
 print("Números de una lista desde el último al primero:")
-inve(L,1)                                                   ###### Llamar a la función max #################
+invierteLista(Lista,1)                                                   ###### Llamar a la función max #################
 ############################################################################################################
 
 ####################################### Prueba inciso c) ##################################################
 print('Si la lista L representa una función polinomial. La evaluación de P(x) es la siguiente:')
 x=int(input('Ingrese el valor de la variable x para evaluar el polinomio:'))
 
-print(pol(x,L,len(L)-1,0))
+print(polinomioHoner(x,Lista,len(Lista)-1,0))
 ###########################################################################################################
