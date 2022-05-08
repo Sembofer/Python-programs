@@ -19,4 +19,3 @@ def termSerie(termino):
 
 term=int(input("Ingrese el término de la serie deseado:"))     # Pide el término al usuario
 print(termSerie(term))                                         # Muestra el resultado
-############################################################################################################
