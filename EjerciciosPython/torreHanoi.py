@@ -1,5 +1,5 @@
 # Problema de la torre de Hanoi
-# Sin resolver
+# en proceso
 
 
 
