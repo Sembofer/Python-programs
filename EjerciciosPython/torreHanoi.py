@@ -1,5 +1,9 @@
 # Problema de la torre de Hanoi
+<<<<<<< HEAD
 # Estado actual en proceso 
+=======
+# Cabecera
+>>>>>>> cabecera
 
 
 
