@@ -1,10 +1,9 @@
+# JUEGO DE LA RAYUELA 
+# Escribir una función recursiva que calcule el número de caminos posibles
+# para alcanzar un adoquín objetivo numerado con "n" mayor que cero.
 
-######################################### JUEGO DE LA RAYUELA ##############################################
-############### Escribir una función recursiva que calcule el número de caminos posibles ###################
-################## para alcanzar un adoquín objetivo numerado con "n" mayor que cero. ######################
-
-######### Como punto de partida, hay dos caminos sencillos: 1) camino con saltos de uno en uno. ############
-######### 2) camino saltando al inicio el número 1 y seguido de saltos de uno en uno. ######################
+######### Como punto de partida, hay dos caminos sencillos: 1) camino con saltos de uno en uno.
+######### 2) camino saltando al inicio el número 1 y seguido de saltos de uno en uno.
 
 # A partir del tercer camino, cuando se salta el adoquín 2, el número de caminos posibles corresponde al
 # número de caminos posibles para llegar a n más el número de caminos posibles para llegar a (n-1), así sucesivamente.
