@@ -1,9 +1,5 @@
 # Problema de la torre de Hanoi
-<<<<<<< HEAD
-# Estado actual en proceso 
-=======
-# Cabecera
->>>>>>> cabecera
+# Estado actual en proceso
 
 
 
@@ -19,7 +15,7 @@ def mov(A,index1a,index2a,T, index):
         mov(A,index1a,index2a,T,index)
     elif len(A[0])%2!=0 and len(A[0])!=0:
         print(f'Mover {A[0][len(A[0])-1]} a {T[0+1]}')
-        A[0]=A[0][:len(A[0])-1] 
+        A[0]=A[0][:len(A[0])-1]
         print(A[0])
         A[1]=A[1]+ A[0][len(A[0])-1]
         print(A[1])
