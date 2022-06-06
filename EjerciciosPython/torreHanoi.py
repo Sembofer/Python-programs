@@ -1,38 +1,23 @@
 # Problema de la torre de Hanoi
-# Estado actual en proceso
-# Prueba para ssh
 
 
 
 
-def mov(A,index1a,index2a,T, index):
-    if len(A[0])%2==0 and len(A[0])!=0:
-        print(f'Mover {A[0][len(A[0])-1]} a {T[0+2]}')
-        A[2]=A[2]+ A[0][len(A[0])-1]
-        print(A[2])
-        A[0]=A[0][:len(A[0])-1]
-        print(A[0])
-        mov(A,index1a,index2a,T,index)
-    elif len(A[0])%2!=0 and len(A[0])!=0:
-        print(f'Mover {A[0][len(A[0])-1]} a {T[0+1]}')
-        A[0]=A[0][:len(A[0])-1]
-        print(A[0])
-        A[1]=A[1]+ A[0][len(A[0])-1]
-        print(A[1])
-    elif len(A[0])%2==0 and A[0]==[]:
-        print("Fin")
+def hanoi(n,tInicio,tApoyo,tDestino):
+    """_summary_
 
+    Argumentoss:
+        n (entero): número de discos
+        tInicio : Torre de partida que contiene todos los n discos.
+        tApoyo :  Torre destino que recibe todos los n discos.
+        tDestino :  Torre por donde fluyen los discos para llegar a la torre destino.
+    """
+    if (n==1):
+        print('Mueve el disco de la torre '+str(tInicio)+' a la torre '+str(tDestino))
+    else:
+        hanoi(n-1, tInicio,tDestino, tApoyo)
+        print('Mueve el disco de la torre '+str(tInicio)+' a la torre '+str(tDestino))
+        hanoi(n-1, tApoyo,tInicio, tDestino)
 
-
-X=[]
-n = int(input("Número:"))
-for i in range(n,0,-1):
-    X.append(i)
-print(X)
-Y=[]
-Z=[]
-A=[X,Y,Z]
-T=["X","Y","Z"]
-print(T)
-
-mov(A,0,0,T,0)
+d = int(input('Numero de discos: '))
+hanoi(d,'A', 'B', 'C')
