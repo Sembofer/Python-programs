@@ -1,8 +1,5 @@
 # Problema de la torre de Hanoi
 
-
-
-
 def hanoi(n,tInicio,tApoyo,tDestino):
     """_summary_
 
